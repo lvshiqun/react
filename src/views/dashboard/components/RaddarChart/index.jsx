@@ -127,6 +127,7 @@ class RaddarChart extends Component {
   initChart() {
     if (!this.el) return;
     this.setState({ chart: echarts.init(this.el, "macarons") }, () => {
+      console.log(this.props.chartData)
       this.setOptions(this.props.chartData);
     });
   }

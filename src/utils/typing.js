@@ -21,6 +21,7 @@ class Typing {
   convert(dom, arr) {
     //将dom节点的子节点转换成数组，
     let children = Array.from(dom.childNodes)
+    console.log(children)
     for (let i = 0; i < children.length; i++) {
       let node = children[i]
       if (node.nodeType === 3) {

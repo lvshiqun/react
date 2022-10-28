@@ -98,14 +98,19 @@ class Meun extends Component {
   };
 
   handleMenuSelect = ({ key = "/dashboard" }) => {
+    console.log(menuList, "path", key)
     let menuItem = getMenuItemInMenuListByProperty(menuList, "path", key);
     this.props.addTag(menuItem);
+    console.log(this.props,this.props.addTag(menuItem))
   };
 
   componentWillMount() {
+    console.log(this.props)
     const menuTreeNode = this.getMenuNodes(menuList);
     this.setState({
       menuTreeNode,
+    },()=>{
+      console.log(this.state.menuTreeNode)
     });
     this.handleMenuSelect(this.state.openKey);
   }

@@ -71,6 +71,7 @@ class UploadExcel extends Component {
         const worksheet = workbook.Sheets[firstSheetName];
         const header = getHeaderRow(worksheet);
         const results = XLSX.utils.sheet_to_json(worksheet);
+        console.log(header,results,worksheet)
         this.generateData({ header, results });
         resolve();
       };

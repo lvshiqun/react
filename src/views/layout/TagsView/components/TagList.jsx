@@ -100,6 +100,7 @@ class TagList extends Component {
     this.closeContextMenu();
   };
   render() {
+    console.log(this.props)
     const { left, top, menuVisible } = this.state;
     const { taglist, history } = this.props;
     const currentPath = history.location.pathname;

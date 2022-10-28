@@ -1,10 +1,9 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { connect } from "react-redux";
 import { Layout } from "antd";
 import Logo from "./Logo";
 import Menu from "./Menu";
 const { Sider } = Layout;
-
 const LayoutSider = (props) => {
   const { sidebarCollapsed, sidebarLogo } = props;
   return (
@@ -21,6 +20,7 @@ const LayoutSider = (props) => {
 };
 
 const mapStateToProps = (state) => {
+  console.log(state)
   return {
     ...state.app,
     ...state.settings,

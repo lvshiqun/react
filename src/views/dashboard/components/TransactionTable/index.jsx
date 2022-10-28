@@ -54,7 +54,7 @@ class TransactionTable extends Component {
       <Table
         columns={columns}
         dataSource={this.state.list}
-        pagination={false}
+        pagination={true}
       />
     );
   }

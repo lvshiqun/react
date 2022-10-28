@@ -41,7 +41,9 @@ class AddUserForm extends Component {
           <Form.Item label="用户ID:">
             {getFieldDecorator("id", {
               rules: [{ required: true, validator: this.validatUserID }],
-            })(<Input placeholder="请输入用户ID" />)}
+            })
+            (<Input placeholder="请输入用户ID" />)
+            }
           </Form.Item>
           <Form.Item label="用户名称:">
             {getFieldDecorator("name", {
